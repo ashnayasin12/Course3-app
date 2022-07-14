@@ -1,0 +1,24 @@
+<h1 align="center" style="color: rgb(255, 255, 255)"><b>COURSES</b></h1>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="card">
+                        <img height="200px"src="https://cpj.edu.in/blog/wp-content/uploads/2021/07/bca-admission-2021.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="color: blueviolet" class="card-title"><b>{{i.courseTitle}}</b></h5>
+                          <br>
+                          <h6><b>{{i.courseDescription}}</b></h6>
+                          <h6><b>{{i.courseDuration}}</b></h6>
+                          <h6><b>{{i.courseDate}}</b></h6>
+                          <h6><b>{{i.courseVenue}}</b></h6>
+                          <a href="#" class="btn btn-dark" style="color:blueviolet"><b>PURCHASE</b></a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
