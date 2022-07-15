@@ -8,11 +8,25 @@ import { ViewcourseService } from '../viewcourse.service';
 })
 export class AddcourseComponent implements OnInit {
 
-  constructor() { 
+ course={ courseTitle:"",
+ courseDescription:"",
+ courseDate:"",
+ courseVenue:"",
+ courseDuration:""
+ }
+
+  constructor(private courseservice:ViewcourseService) { 
     
   }
 
   ngOnInit(): void {
   }
+ Addcourse() {
+  this.courseservice.addcourse(this.course).subscribe((data)=>{ 
+  console.log(this.course);
+  
+  })
+  alert("Success!");
 
+}
 }
